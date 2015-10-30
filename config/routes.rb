@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
    get "/oauth/connect", to: 'photo_api#connect', as: 'connect'
    get "/oauth/callback", to: 'photo_api#callback', as: 'callback'
-   get "/navigation", to: 'photo_api#navigation', as: 'navigate'
+   get "/navigation", to: 'photo_api#navigation', as: 'navigation'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

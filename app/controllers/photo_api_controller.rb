@@ -8,7 +8,7 @@ class PhotoApiController < ApplicationController
 		if(params.has_key?(:code))
 			response = Instagram.get_acces_token(params[:code], :redirect_uri => CALLBACK_url)
 			session[:acces_token]=response.acces_token
-			redirect_to 
+			redirect_to navigation_url
 		elsif (params.has_key?(:error))
 			@message = "No Authorization Error."
 		else 
