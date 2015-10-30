@@ -6,7 +6,7 @@ class PhotoApiController < ApplicationController
 
 	def callback
 		if(params.has_key?(:code))
-			response = Instagram.get_acces_token(params[:code], :redirect_uri => CALLBACK_url)
+			response = Instagram.get_acces_token(params[:code], :redirect_uri => callback_url)
 			session[:acces_token]=response.acces_token
 			redirect_to navigation_url
 		elsif (params.has_key?(:error))
