@@ -5,7 +5,21 @@ class PhotoApiController < ApplicationController
 	end
 
 	def callback
-		#response = Instagram.get_acces_token(params[:code], :redirect_uri => CALLBACK_url)
-		#session[:acces_token]=response.acces_token
+		if(params.has_key?(:code))
+			response = Instagram.get_acces_token(params[:code], :redirect_uri => CALLBACK_url)
+			session[:acces_token]=response.acces_token
+			redirect_to 
+		elsif (params.has_key?(:error))
+			@message = "No Authorization Error."
+		else 
+			@message = "Authorization has Expired, please log in again."
+		end
+
 	end
+
+	def navigation
+		
+	end
+
+
 end

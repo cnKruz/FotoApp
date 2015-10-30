@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'home#index'
 
-   get "/oauth/connect", to: 'photo_api#connect'
+   get "/oauth/connect", to: 'photo_api#connect', as: 'connect'
    get "/oauth/callback", to: 'photo_api#callback', as: 'callback'
+   get "/navigation", to: 'photo_api#navigation', as: 'navigate'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

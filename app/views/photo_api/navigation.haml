@@ -1,0 +1,123 @@
+%header#home
+  %nav
+    .container-fluid
+      .row
+        .col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-8.col-xs-offset-2
+          %nav.pull
+            %ul.top-nav
+              %li
+                %a{:href => "#intro"}
+                  Introduction
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#features"}
+                  Features
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#responsive"}
+                  Responsive Design
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#portfolio"}
+                  Portfolio
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#team"}
+                  Team
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#contact"}
+                  Get in Touch
+                  %span.indicator
+                    %i.fa.fa-angle-right
+  %section.text-center.section-padding
+    .container
+      .row
+        .col-md-12.text-right.navicon
+          %a#nav-toggle.nav_slide_button{:href => "#"}
+            %span
+
+%section#portfolio.portfolio.text-center.section-padding
+  .container
+    .row
+      #portfolioSlider
+        %ul.slides
+          %li
+            .col-md-4.wp4
+              .overlay-effect.effects.clearfix
+                .img
+                  %img{:alt => "Portfolio Item", :src => "/assets/portfolio-01.jpg"}/
+                  .overlay
+                    %a.expand{:href => "#"}
+                      %i.fa.fa-clock-o
+                      = succeed "Recent media" do
+                        %br/
+                    %a.close-overlay.hidden x
+              %h2 Recent Media
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+            .col-md-4.wp4.delay-05s
+              .overlay-effect.effects.clearfix
+                .img
+                  %img{:alt => "Portfolio Item", :src => "/assets/portfolio-02.jpg"}/
+                  .overlay
+                    %a.expand{:href => "#"}
+                      %i.fa.fa-instagram
+                      = succeed "User Feed" do
+                        %br/
+                    %a.close-overlay.hidden x
+              %h2 User Feed
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+            .col-md-4.wp4.delay-1s
+              .overlay-effect.effects.clearfix
+                .img
+                  %img{:alt => "Portfolio Item", :src => "/assets/portfolio-03.jpg"}/
+                  .overlay
+                    %a.expand{:href => "#"}
+                      %i.fa.fa-search
+                      = succeed "Media Search" do
+                        %br/
+                    %a.close-overlay.hidden x
+              %h2 Media Search
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+          %li
+            .col-md-4.wp4
+              .overlay-effect.effects.clearfix
+                .img
+                  %img{:alt => "Portfolio Item", :src => "/assets/portfolio-01.jpg"}/
+                  .overlay
+                    %a.expand{:href => "#"}
+                      %i.fa.fa-search
+                      = succeed "View" do
+                        %br/
+                    %a.close-overlay.hidden x
+              %h2 Creative Minds
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+            .col-md-4.wp4.delay-05s
+              .overlay-effect.effects.clearfix
+                .img
+                  %img{:alt => "Portfolio Item", :src => "/assets/portfolio-02.jpg"}/
+                  .overlay
+                    %a.expand{:href => "#"}
+                      %i.fa.fa-search
+                      = succeed "View" do
+                        %br/
+                    %a.close-overlay.hidden x
+              %h2 Creative Hearts
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+            .col-md-4.wp4.delay-1s
+              .overlay-effect.effects.clearfix
+                .img
+                  %img{:alt => "Portfolio Item", :src => "/assets/portfolio-03.jpg"}/
+                  .overlay
+                    %a.expand{:href => "#"}
+                      %i.fa.fa-search
+                      = succeed "View" do
+                        %br/
+                    %a.close-overlay.hidden x
+              %h2 Creative Ideas
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
