@@ -6,8 +6,8 @@ class PhotoApiController < ApplicationController
 
 	def callback
 		if(params.has_key?(:code))
-			response = Instagram.get_acces_token(params[:code], :redirect_uri => callback_url)
-			session[:acces_token]=response.acces_token
+			response = Instagram.get_access_token(params[:code], :redirect_uri => callback_url)
+			session[:acces_token]=response.access_token
 			redirect_to navigation_url
 		elsif (params.has_key?(:error))
 			@message = "No Authorization Error."
