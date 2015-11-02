@@ -45,11 +45,12 @@
       .team-wrapper
         #teamSlider
           %ul.slides
-          = @client.user_recent_media.each_slice(3) do |slice|           
+          - @client.user_recent_media.each_slice(3) do |slice|           
             %li
-            = slice.each do |media_item|
+            - slice.each do |media_item|
               .col-md-4.wp5
                 %img{:alt => "Team Member", :src => "#{media_item.images.thumbnail.url}"}
+
 %footer
   .container
     .row
