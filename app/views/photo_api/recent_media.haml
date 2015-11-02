@@ -1,0 +1,81 @@
+%header#home
+  %nav
+    .container-fluid
+      .row
+        .col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-8.col-xs-offset-2
+          %nav.pull
+            %ul.top-nav
+              %li
+                %a{:href => "#intro"}
+                  Introduction
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#features"}
+                  Features
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#responsive"}
+                  Responsive Design
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#portfolio"}
+                  Portfolio
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#team"}
+                  Team
+                  %span.indicator
+                    %i.fa.fa-angle-right
+              %li
+                %a{:href => "#contact"}
+                  Get in Touch
+                  %span.indicator
+                    %i.fa.fa-angle-right
+%section.text-center.section-padding
+  .container
+    .row
+      .col-md-12.text-right.navicon
+        %a#nav-toggle.nav_slide_button{:href => "#"}
+          %span
+    .row
+      .team-wrapper
+        #teamSlider
+          %ul.slides
+          = @client.user_recent_media.each_slice(3) do |slice|           
+            %li
+            = slice.each do |media_item|
+              .col-md-4.wp5
+                %img{:alt => "Team Member", :src => "#{media_item.images.thumbnail.url}"}/
+                /%h2 Jon Snow
+                /%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.
+                /.social
+                  /%ul.social-buttons
+                    /%li
+                     / %a.social-btn{:href => "#"}
+                        /%i.fa.fa-dribbble
+                    /%li
+                      /%a.social-btn{:href => "#"}
+                        /%i.fa.fa-twitter
+                    /%li
+                      /%a.social-btn{:href => "#"}
+                        /%i.fa.fa-envelope
+%footer
+  .container
+    .row
+      .col-md-6
+        %ul.legals
+          %li
+            %a{:href => "#"} Terms &amp; Conditions
+          %li
+            %a{:href => "#"} Legals
+      .col-md-6.credit
+        %p
+          Designed &amp; Developed by
+          %a{:href => "http://www.peterfinlan.com/"} Peter Finlan
+          exclusively for
+          %a{:href => "http://tympanus.net/codrops/"}
+            %em Codrops
