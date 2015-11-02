@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FotoApp
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body#top
+    = yield
+
+    %footer
+      .container
+        .row
+          .col-md-6
+            %ul.legals
+              %li
+                %a{:href => "#"} Terms &amp; Conditions
+              %li
+                %a{:href => "#"} Legals
+          .col-md-6.credit
+            %p
+              Designed &amp; Developed by
+              %a{:href => "http://www.peterfinlan.com/"} Peter Finlan
+              exclusively for
+              %a{:href => "http://tympanus.net/codrops/"}
+                %em Codrops
+
+                
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true

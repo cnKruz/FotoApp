@@ -1,4 +1,5 @@
 class PhotoApiController < ApplicationController
+	layout "main", :only => [:connect, :callback]
 	before_action :set_client
 
 	def connect
@@ -24,10 +25,6 @@ class PhotoApiController < ApplicationController
 	def recent_media
 		@user=@client.user
 	
-	end
-
-	def navigation
-
 	end
 
    	def feed
